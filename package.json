@@ -1,0 +1,51 @@
+{
+  "name": "vue-easy-admin-doc",
+  "version": "1.0.0",
+  "description": "vue-easy-admin-doc",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "precommit": "lint-staged",
+    "lint": "prettier --write 'docs/**/*.md'",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "author": "ZhangGuo",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "1.14.2",
+    "vuepress": "0.14.9",
+    "husky": "0.14.3",
+    "lint-staged": "7.2.2",
+    "gh-pages": "2.0.1"
+  },
+  "dependencies": {
+    "axios": "0.18.1",
+    "webpack-dev-middleware": "^3.6.0"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastCreator/vue-easy-admin-doc.git"
+  },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "easy-admin",
+    "vue components"
+  ],
+  "homepage": "https://fastcreator.github.io/vue-easy-admin-doc/"
+}
