@@ -1,9 +1,3 @@
-var nav = require('./nav.js')
-var { EcosystemNav, ComponentNav } = nav
-
-var utils = require('./utils.js')
-var { genNav, getComponentSidebar, deepClone } = utils
-
 module.exports = {
   title: 'vue-easy-admin',
   description: '快速开发中后台的VUE微前端架构',
@@ -18,11 +12,11 @@ module.exports = {
     ]
   ],
   themeConfig: {
-    repo: 'fastCreator/vue-easy-admin',
     docsRepo: 'fastCreator/vue-easy-admin-doc',
     docsDir: 'docs',
     editLinks: true,
     sidebarDepth: 3,
+    sidebar: 'auto',
     algolia: {
       apiKey: '', //等待申请
       indexName: 'vue-easy-admin-doc'
@@ -38,20 +32,33 @@ module.exports = {
             link: '/zh/guide/'
           },
           {
-            text: '配置参考',
-            items: genNav(deepClone(ComponentNav), 'ZH')
+            text: 'DEMO',
+            link: 'https://fastcreator.github.io/vue-easy-admin-demo/'
           },
           {
-            text: '生态系统',
-            items: genNav(deepClone(EcosystemNav), 'ZH')
+            text: 'GitHub',
+            items: [
+              {
+                text: 'vue-easy-admin(框架)',
+                link: 'https://github.com/fastCreator/vue-easy-admin'
+              },
+              {
+                text: 'vue-easy-admin-components(组件)',
+                link: 'https://github.com/fastCreator/vue-easy-admin-components'
+              },
+              {
+                text: 'vue-easy-admin-demo(DEMO)',
+                link: 'https://github.com/fastCreator/vue-easy-admin-demo'
+              },
+              {
+                text: 'vue-easy-admin-doc(文档)',
+                link: 'https://github.com/fastCreator/vue-easy-admin-doc'
+              }
+            ]
           },
           {
             text: '捐赠',
             link: '/zh/donate/'
-          },
-          {
-            text: '中文站点(gitee)',
-            link: 'https://panjiachen.gitee.io/vue-easy-admin-doc/zh/'
           }
         ],
         sidebar: {
@@ -59,29 +66,13 @@ module.exports = {
             {
               title: '基础',
               collapsable: false,
-              children: genEssentialsSidebar('/zh')
+              children: ['', 'introduction', 'service']
             },
             {
-              title: '服务',
+              title: '进阶',
               collapsable: false,
-              children: genConfigSidebar('/zh')
-            },
-            {
-              title: '其它',
-              collapsable: false,
-              children: [
-                '/zh/guide/other/faq.md',
-                '/zh/guide/other/release-notes.md'
-              ]
+              children: ['microFrontEnd']
             }
-          ],
-          '/zh/feature/component/': getComponentSidebar(
-            deepClone(ComponentNav),
-            'ZH'
-          ),
-          '/zh/feature/script/': [
-            '/zh/feature/script/svgo.md',
-            '/zh/feature/script/new.md'
           ]
         }
       }
@@ -101,26 +92,4 @@ module.exports = {
     }
   },
   ga: ''
-}
-
-function genEssentialsSidebar(type = '') {
-  const mapArr = [
-    '/guide/',
-    '/guide/essentials/start.md',
-    '/guide/essentials/microFrontEnd.md'
-  ]
-  return mapArr.map(i => {
-    return type + i
-  })
-}
-
-function genConfigSidebar(type = '') {
-  const mapArr = [
-    '/guide/config/config.md',
-    '/guide/config/container.md',
-    '/guide/config/page.md'
-  ]
-  return mapArr.map(i => {
-    return type + i
-  })
 }
