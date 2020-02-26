@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速构建 | vue-easy-admin</title>
+    <meta name="description" content="快速开发中后台的VUE微前端架构">
+    <link rel="icon" href="/vue-easy-admin-doc/favicon.ico">
+    
+    <link rel="preload" href="/vue-easy-admin-doc/assets/css/0.styles.7cfc9e72.css" as="style"><link rel="preload" href="/vue-easy-admin-doc/assets/js/app.96d10ea2.js" as="script"><link rel="preload" href="/vue-easy-admin-doc/assets/js/18.733d955d.js" as="script"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/10.378725d7.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/11.4a49961d.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/12.019c8663.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/13.9cf78322.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/14.4e9cf97d.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/15.c9a1cd89.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/16.8ba441a0.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/17.a8ced163.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/19.c48a35c5.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/20.6cbf027a.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/21.7bd8ba93.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/22.64bcb98d.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/23.9a63f7ae.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/3.735c5515.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/4.6ed9d69a.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/5.8513f868.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/6.b351391c.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/7.69afacb7.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/8.189ab5c1.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/9.6662f038.js"><link rel="prefetch" href="/vue-easy-admin-doc/assets/js/vendors~docsearch.76a22edb.js">
+    <link rel="stylesheet" href="/vue-easy-admin-doc/assets/css/0.styles.7cfc9e72.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><!----> <header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-easy-admin-doc/" class="home-link router-link-active"><!----> <span class="site-name">vue-easy-admin</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-easy-admin-doc/zh/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="https://fastcreator.github.io/vue-easy-admin-demo/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DEMO
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fastCreator/vue-easy-admin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-easy-admin(框架)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fastCreator/vue-easy-admin-components" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-easy-admin-components(组件)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fastCreator/vue-easy-admin-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-easy-admin-demo(DEMO)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fastCreator/vue-easy-admin-doc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-easy-admin-doc(文档)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="/vue-easy-admin-doc/zh/donate/" class="nav-link">捐赠</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-easy-admin-doc/zh/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="https://fastcreator.github.io/vue-easy-admin-demo/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DEMO
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fastCreator/vue-easy-admin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-easy-admin(框架)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fastCreator/vue-easy-admin-components" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-easy-admin-components(组件)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fastCreator/vue-easy-admin-demo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-easy-admin-demo(DEMO)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/fastCreator/vue-easy-admin-doc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-easy-admin-doc(文档)
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="/vue-easy-admin-doc/zh/donate/" class="nav-link">捐赠</a></div> <!----></nav> <div class="load-success"><div id="codefund"></div></div> <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>基础</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/vue-easy-admin-doc/zh/guide/" class="sidebar-link">介绍</a></li><li><a href="/vue-easy-admin-doc/zh/guide/introduction.html" class="active sidebar-link">快速构建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#目录结构" class="sidebar-link">目录结构</a></li><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#新增菜单页" class="sidebar-link">新增菜单页</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#页面级别服务配置-config-js" class="sidebar-link">页面级别服务配置-config.js</a></li><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#数据转换-api-js" class="sidebar-link">数据转换-api.js</a></li><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#多语言配置-lang-json" class="sidebar-link">多语言配置-lang.json</a></li><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#常量定义-const-js" class="sidebar-link">常量定义-const.js</a></li><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#数据模拟-mock-js" class="sidebar-link">数据模拟-mock.js</a></li></ul></li><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#全局配置" class="sidebar-link">全局配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#webpack-配置-container-js" class="sidebar-link">webpack 配置-container.js</a></li><li class="sidebar-sub-header"><a href="/vue-easy-admin-doc/zh/guide/introduction.html#全局服务配置-config-js" class="sidebar-link">全局服务配置-config.js</a></li></ul></li></ul></li><li><a href="/vue-easy-admin-doc/zh/guide/service.html" class="sidebar-link">内置服务配置</a></li><li><a href="/vue-easy-admin-doc/zh/guide/project.html" class="sidebar-link">工程化</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/vue-easy-admin-doc/zh/guide/microFrontEnd.html" class="sidebar-link">微前端</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="快速构建"><a href="#快速构建" class="header-anchor">#</a> 快速构建</h1> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 全局安装脚本</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g vue-easy-admin
+
+<span class="token comment"># 快速构建项目</span>
+easy-admin create projectName
+
+<span class="token comment"># 下载依赖</span>
+<span class="token function">npm</span> <span class="token function">install</span>
+
+<span class="token comment"># 运行</span>
+<span class="token function">npm</span> run serve
+<span class="token comment"># 打包</span>
+<span class="token function">npm</span> run build
+<span class="token comment"># 发布</span>
+<span class="token function">npm</span> run deploy
+</code></pre></div><h2 id="目录结构"><a href="#目录结构" class="header-anchor">#</a> 目录结构</h2> <p>通过手脚架已经为你生成了一个完整的开发框架，下面是整个项目的目录结构。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>├── dist                            <span class="token comment"># 打包后资源</span>
+├── public                          <span class="token comment"># 静态资源</span>
+│   │── favicon.ico                 <span class="token comment"># favicon图标</span>
+│   │── 其他文件                    <span class="token comment"># 将会拷贝到dist/public</span>
+│   └── index.html                  <span class="token comment"># html模板</span>
+├── src                             <span class="token comment"># 源代码</span>
+│   ├── components                  <span class="token comment"># 全局公用组件,自动注入</span>
+│   ├── pages                       <span class="token comment"># 页面</span>
+│   │   ├── full                    <span class="token comment"># 不包含菜单、头部布局的页面,如登录页面</span>
+│   │   └── <span class="token builtin class-name">local</span>                   <span class="token comment"># 包含菜单、头部布局的页面</span>
+│   │       └─── pageName           <span class="token comment"># 页面名称，路由自动以名字构建</span>
+│   │            ├── api.js         <span class="token comment"># API封装，在此处处理后端数据与前端数据格式，目的解耦前后端数据，避免污染逻辑层</span>
+│   │            ├── config.json    <span class="token comment"># 页面级别的服务配置文件</span>
+│   │            ├── const.js       <span class="token comment"># 页面使用到的常量</span>
+│   │            ├── index.vue      <span class="token comment"># 界面展示文件</span>
+│   │            ├── lang.json      <span class="token comment"># 多语言配置文件</span>
+│   │            └── mock.js        <span class="token comment"># API数据模拟</span>
+│   ├── svg                         <span class="token comment"># 图片文件目录，自动加载打包为精灵图</span>
+│   └── theme                       <span class="token comment"># 主题文件</span>
+├── .eslintrc.js                    <span class="token comment"># eslint 配置项</span>
+├── .gitignore                      <span class="token comment"># git提交忽略配置</span>
+├── .babel.config.js                <span class="token comment"># babel配置</span>
+├── config.js                       <span class="token comment"># 全局服务配置文件</span>
+├── container.js                    <span class="token comment"># webpack配置</span>
+├── deploy.sh                       <span class="token comment"># 发布脚本</span>
+├── globLang                        <span class="token comment"># 全局多语言</span>
+├── mock.js                         <span class="token comment"># 全局API数据模拟</span>
+├── permission.json                 <span class="token comment"># 生成的权限文件，提供给后端数据库的</span>
+└── package.json                    <span class="token comment"># package.json</span>
+</code></pre></div><h2 id="新增菜单页"><a href="#新增菜单页" class="header-anchor">#</a> 新增菜单页</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 新增菜单页脚本</span>
+easy-admin <span class="token function">add</span> <span class="token builtin class-name">local</span> pageName
+<span class="token comment"># 新增菜全屏页脚本</span>
+easy-admin <span class="token function">add</span> full pageName
+</code></pre></div><h3 id="页面级别服务配置-config-js"><a href="#页面级别服务配置-config-js" class="header-anchor">#</a> 页面级别服务配置-config.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;nav&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;页面1&quot;</span><span class="token punctuation">,</span>                             <span class="token comment">// 页面标题</span>
+    <span class="token string">&quot;icon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dashboard&quot;</span><span class="token punctuation">,</span>                          <span class="token comment">// 菜单页图标，svg文件夹下svg文件名</span>
+    <span class="token string">&quot;parents&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>                                  <span class="token comment">// 父菜单名称</span>
+      <span class="token string">&quot;菜单1&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>                                           <span class="token comment">// 多语言配置</span>
+        <span class="token string">&quot;en&quot;</span><span class="token operator">:</span> <span class="token string">&quot;nav1-1&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;zh-CN&quot;</span><span class="token operator">:</span> <span class="token string">&quot;菜单1-1&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;noCache&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                               <span class="token comment">// 打开多标签时，是否缓存该页面，默认缓存</span>
+    <span class="token string">&quot;isWhite&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                               <span class="token comment">// 将页面添加到白名单，无需权限，即可访问</span>
+    <span class="token string">&quot;noCache&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>                               <span class="token comment">// 打开多标签时，是否缓存该页面，默认缓存</span>
+    <span class="token string">&quot;priority&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>                                 <span class="token comment">// 页面优先级，用于菜单排序</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;iframe&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;src&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://www.baidu.com&quot;</span>                  <span class="token comment">// 菜单页以iframe形式内嵌的第三方应用</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;link&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://github.com/fastCreator/vue-easy-admin&quot;</span>   <span class="token comment">// 点击菜单直接打开第三方页面</span>
+  <span class="token string">&quot;permission&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>                                 <span class="token comment">// 权限配置</span>
+    <span class="token string">&quot;apis&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>                                     <span class="token comment">// 页面基础API权限</span>
+      <span class="token string">&quot;get:/v1/apis/testData/{id}&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;goPages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>                                  <span class="token comment">// 需要跳转的公共页配置</span>
+      <span class="token string">&quot;local/page2&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;function&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>                                 <span class="token comment">// 功能按钮配置</span>
+      <span class="token punctuation">{</span>
+        <span class="token string">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;add&quot;</span><span class="token punctuation">,</span>                            <span class="token comment">// 功能标识</span>
+        <span class="token string">&quot;title&quot;</span><span class="token operator">:</span> <span class="token string">&quot;新增&quot;</span><span class="token punctuation">,</span>                          <span class="token comment">// 功能名</span>
+        <span class="token string">&quot;apis&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>                                 <span class="token comment">// 功能需要的API权限配置</span>
+          <span class="token string">&quot;post:/platform/v1/add&quot;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;goPages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token string">&quot;local/page2&quot;</span>                            <span class="token comment">// 功能需要跳转的公共页配置</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="数据转换-api-js"><a href="#数据转换-api-js" class="header-anchor">#</a> 数据转换-api.js</h3> <p>api.js 存在为了转化后端数据，使之与前端所需数据格式一致；不写在页面中，为了解除后端数据格式与前端业务之间的耦合</p> <p>api 中的 this 指向该页面实例，为了解决特殊情况，原则上，只允许调用 this.$net，进行网络请求，转换前后端数据格式</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">getTestData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$net</span><span class="token punctuation">(</span><span class="token string">'get:/v1/apis/testData/{id}'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> params<span class="token operator">:</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="多语言配置-lang-json"><a href="#多语言配置-lang-json" class="header-anchor">#</a> 多语言配置-lang.json</h3> <p>在页面中直接使用 this.$lang.langKey 即可直接使用</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;langKey&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;zh-CN&quot;</span><span class="token operator">:</span> <span class="token string">&quot;登录表单&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;en&quot;</span><span class="token operator">:</span> <span class="token string">&quot;login from&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="常量定义-const-js"><a href="#常量定义-const-js" class="header-anchor">#</a> 常量定义-const.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 可以引用多语言</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> $lang<span class="token punctuation">,</span> $globLang <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    sex<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> label<span class="token operator">:</span> $globLang<span class="token punctuation">.</span>man<span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token operator">:</span> $globLang<span class="token punctuation">.</span>woman<span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="数据模拟-mock-js"><a href="#数据模拟-mock-js" class="header-anchor">#</a> 数据模拟-mock.js</h3> <ul><li>数据模拟复用的 webpack 中的 express 服务</li> <li>随着文件更改而更新服务</li> <li>可以在浏览器中看到 http 请求，方便调试</li> <li>delay(毫秒),便于模拟接口响应速度</li> <li>额外：在全局配置文件中配置 request.mock=true 开启的是浏览器请求拦截，无法发送 http 请求</li></ul> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+  async 'post:/v1/apis/login' (req,delay) {
+    delay(1000)
+    return { code: 200, data: { token: 'token1' } }
+  }
+}
+</code></pre></div><h2 id="全局配置"><a href="#全局配置" class="header-anchor">#</a> 全局配置</h2> <h3 id="webpack-配置-container-js"><a href="#webpack-配置-container-js" class="header-anchor">#</a> webpack 配置-container.js</h3> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// webpack链式修改</span>
+  <span class="token comment">// https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans</span>
+  <span class="token function">chainWebpack</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// webpack merge混入</span>
+  configureWebpack<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="全局服务配置-config-js"><a href="#全局服务配置-config-js" class="header-anchor">#</a> 全局服务配置-config.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 配套组件库</span>
+<span class="token keyword">import</span> vueEasyAdminComponents <span class="token keyword">from</span> <span class="token string">'vue-easy-admin-components'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">init</span> <span class="token punctuation">(</span><span class="token parameter">service</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>   <span class="token comment">// vueRender前，用户初始化代码</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  iass<span class="token operator">:</span> <span class="token punctuation">{</span>            <span class="token comment">// 基础服务代码</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  sass<span class="token operator">:</span> <span class="token punctuation">{</span>            <span class="token comment">// 交互服务代码</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/fastCreator/vue-easy-admin-doc/edit/master/docs/zh/guide/introduction.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/vue-easy-admin-doc/zh/guide/" class="prev router-link-active">
+          介绍
+        </a></span> <span class="next"><a href="/vue-easy-admin-doc/zh/guide/service.html">
+          内置服务配置
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/vue-easy-admin-doc/assets/js/app.96d10ea2.js" defer></script><script src="/vue-easy-admin-doc/assets/js/18.733d955d.js" defer></script>
+  </body>
+</html>
