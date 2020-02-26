@@ -11,7 +11,11 @@ easy-admin create projectName
 npm install
 
 # 运行
-easy-admin run serve
+npm run serve
+# 打包
+npm run build
+# 发布
+npm run deploy
 ```
 
 ## 目录结构
@@ -19,27 +23,34 @@ easy-admin run serve
 通过手脚架已经为你生成了一个完整的开发框架，下面是整个项目的目录结构。
 
 ```bash
+├── dist                            # 打包后资源
 ├── public                          # 静态资源
 │   │── favicon.ico                 # favicon图标
+│   │── 其他文件                    # 将会拷贝到dist/public
 │   └── index.html                  # html模板
 ├── src                             # 源代码
 │   ├── components                  # 全局公用组件,自动注入
 │   ├── pages                       # 页面
-│   │   ├── full                    # 不包含菜单、头部布局的页面
+│   │   ├── full                    # 不包含菜单、头部布局的页面,如登录页面
 │   │   └── local                   # 包含菜单、头部布局的页面
 │   │       └─── pageName           # 页面名称，路由自动以名字构建
-│   │            ├── api.js         # API封装，数据逻辑与业务逻辑解耦
-│   │            ├── config.json    # 页面界别配置分拣
+│   │            ├── api.js         # API封装，在此处处理后端数据与前端数据格式，目的解耦前后端数据，避免污染逻辑层
+│   │            ├── config.json    # 页面级别的服务配置文件
+│   │            ├── const.js       # 页面使用到的常量
 │   │            ├── index.vue      # 界面展示文件
 │   │            ├── lang.json      # 多语言配置文件
-│   │            └── mock.js        # 页面API数据模拟
-│   ├── svg                         # svg文件
+│   │            └── mock.js        # API数据模拟
+│   ├── svg                         # 图片文件目录，自动加载打包为精灵图
 │   └── theme                       # 主题文件
 ├── .eslintrc.js                    # eslint 配置项
 ├── .gitignore                      # git提交忽略配置
+├── .babel.config.js                # babel配置
 ├── config.js                       # 全局服务配置文件
-├── container.js                    # 容器配置文件
-├── permission.json                 # 生成的权限文件
+├── container.js                    # webpack配置
+├── deploy.sh                       # 发布脚本
+├── globLang                        # 全局多语言
+├── mock.js                         # 全局API数据模拟
+├── permission.json                 # 生成的权限文件，提供给后端数据库的
 └── package.json                    # package.json
 ```
 
@@ -52,7 +63,7 @@ easy-admin add local pageName
 easy-admin add full pageName
 ```
 
-### 页面配置-config.js
+### 页面级别服务配置-config.js
 
 ```js
 {
@@ -66,9 +77,16 @@ easy-admin add full pageName
         "zh-CN": "菜单1-1"
       }
     ],
-    "noCache": true                               // 打开多标签时，是否缓存该页面，默认缓存
+    "noCache": true,                               // 打开多标签时，是否缓存该页面，默认缓存
+    "isWhite": true,                               // 将页面添加到白名单，无需权限，即可访问
+    "noCache": true,                               // 打开多标签时，是否缓存该页面，默认缓存
+    "priority": 1,                                 // 页面优先级，用于菜单排序
   },
-  "permission": {                                 // 权限配置,权限章节详解
+  "iframe": {
+    "src": "https://www.baidu.com"                  // 菜单页以iframe形式内嵌的第三方应用
+  },
+  "link": "https://github.com/fastCreator/vue-easy-admin"   // 点击菜单直接打开第三方页面
+  "permission": {                                 // 权限配置
     "apis": [                                     // 页面基础API权限
       "get:/v1/apis/testData/{id}"
     ],
@@ -118,12 +136,27 @@ export default {
 }
 ```
 
+### 常量定义-const.js
+
+```js
+// 可以引用多语言
+export default function({ $lang, $globLang }) {
+  return {
+    sex: [
+      { label: $globLang.man, value: 0 },
+      { label: $globLang.woman, value: 1 }
+    ]
+  }
+}
+```
+
 ### 数据模拟-mock.js
 
 - 数据模拟复用的 webpack 中的 express 服务
 - 随着文件更改而更新服务
 - 可以在浏览器中看到 http 请求，方便调试
 - delay(毫秒),便于模拟接口响应速度
+- 额外：在全局配置文件中配置 request.mock=true 开启的是浏览器请求拦截，无法发送 http 请求
 
 ```
 module.exports = {

@@ -66,7 +66,7 @@ module.exports = {
             {
               title: '基础',
               collapsable: false,
-              children: ['', 'introduction', 'service']
+              children: ['', 'introduction', 'service', 'project']
             },
             {
               title: '进阶',
