@@ -8,7 +8,7 @@
     "build": "vuepress build docs",
     "precommit": "lint-staged",
     "lint": "prettier --write 'docs/**/*.md'",
-    "deploy": "npm run build && gh-pages -d docs/.vuepress/dist",
+    "deploy": "bash deploy.sh",
     "commit": "npx git-cz"
   },
   "lint-staged": {

@@ -3,12 +3,12 @@ home: true
 heroImage: /home.png
 title: a
 actionText: Get Started →
-actionLink: /zh/guide/introduction.html
+actionLink: /zh/guide/
 features:
   - title: 丰富组件
     details: 基于典型中后台系统，提供了丰富的功能组件
-  - title: 云前端
-    details: 提供典型中后台服务，快速复用
+  - title: 工程化
+    details: 提供代码提交、发布、构建整个工程化解决方案
   - title: 主题服务
     details: 支持快速自定义动态换肤功能
   - title: MOCK
