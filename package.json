@@ -8,7 +8,8 @@
     "build": "vuepress build docs",
     "precommit": "lint-staged",
     "lint": "prettier --write 'docs/**/*.md'",
-    "deploy": "npm run build && gh-pages -d docs/.vuepress/dist"
+    "deploy": "npm run build && gh-pages -d docs/.vuepress/dist",
+    "commit": "npx git-cz"
   },
   "lint-staged": {
     "*.{js,json,css,md,vue}": [
@@ -49,5 +50,10 @@
     "easy-admin",
     "vue components"
   ],
-  "homepage": "https://fastcreator.github.io/vue-easy-admin-doc/"
+  "homepage": "https://fastcreator.github.io/vue-easy-admin-doc/",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
